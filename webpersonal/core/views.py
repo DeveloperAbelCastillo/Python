@@ -9,3 +9,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'core/contact.html')
+
+def trayectoria(request):
+    return render(request, 'core/trayectoria.html')

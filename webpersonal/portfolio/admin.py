@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Project
+from .models import ProjectPortfolio
 
 # Register your models here.
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectPortfolioAdmin(admin.ModelAdmin):
     readonly_fields = ('created','updated')
 
 
 
-admin.site.register(Project, ProjectAdmin)
+admin.site.register(ProjectPortfolio, ProjectPortfolioAdmin)
