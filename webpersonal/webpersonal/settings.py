@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'about.apps.AboutConfig',
     'trayectoria.apps.TrayectoriaConfig',
+    'formacion.apps.FormacionConfig',
 ]
 
 MIDDLEWARE = [

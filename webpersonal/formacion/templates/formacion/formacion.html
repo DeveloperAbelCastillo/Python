@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Formación{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/formacion.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Formación</h1>
+<span class="subheading">Académica</span>
+{% endblock %}
+
+{% block content %}
+    {% for projectformacion in projectsformacion %}
+        <!-- Proyecto -->
+        <div class="row project">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{projectformacion.image.url}}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                    <h2 class="section-heading title">{{projectformacion.titulo}} {{projectformacion.especialidad}}</h2>   
+                <p>{{projectformacion.institucion}}</p>
+                <p>{{projectformacion.ubicacion}}</p>
+                {% if projectformacion.muestragraduacion == True %}
+                    <p>Año de Graduación: {{projectformacion.graduacion}}</p>
+                {% endif %}
+                <p>{{projectformacion.notaadicional}}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
