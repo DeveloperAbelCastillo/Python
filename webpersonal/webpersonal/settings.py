@@ -25,7 +25,7 @@ SECRET_KEY = '93o-54!xq1n-g(5&q6@%nh!9nk2*@m-ls%i9nq4*dcnb+89b8)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abcala.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media files
 MEDIA_URL = '/media/'
