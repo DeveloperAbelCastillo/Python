@@ -21,10 +21,10 @@
             <p>{{projecttrayectoria.description}}</p>
             <p>Ingreso: {{projecttrayectoria.startOfEmployment}}</p>
             <p>Salida: 
-                {% if projecttrayectoria.exitOfEmployment == null %}
-                    Actualidad
-                {% else %}
+                {% if projecttrayectoria.exitOfEmployment != null and projecttrayectoria.exitOfEmployment != "" %}
                     {{projecttrayectoria.exitOfEmployment}}
+                {% else %}
+                    Actualidad
                 {% endif %}
             </p>
             <p><a href="{{projecttrayectoria.urlimage}}" target="_blank">Ir a Empresa...</a></p>

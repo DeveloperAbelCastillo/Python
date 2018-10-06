@@ -16,15 +16,19 @@
             <div class="col-lg-3 col-md-4 offset-lg-1">
                 <img class="img-fluid" src="{{projectportfolio.image.url}}" alt="">
             </div>
-            <div class="col-lg-7 col-md-8">
+            <div class="col-lg-7 col-md-8 text-justify">
                     <h2 class="section-heading title">{{projectportfolio.title}}</h2>   
                 <p>{{projectportfolio.description}}</p>
-                <p>Ingreso: {{projectportfolio.startOfEmployment}}</p>
-                <p>Salida: 
-                    {% if projectportfolio.exitOfEmployment == null %}
-                        Actualidad
+                <p>Inicio de Proyecto: {{projectportfolio.startproject}}</p>
+                <p>Fin de Proyecto: 
+                    {% if projectportfolio.exitproject == null %}
+                        En proceso
                     {% else %}
-                        {{projectportfolio.exitOfEmployment}}
+                        {{projectportfolio.exitproject}}
+                    {% endif %}
+                </p>
+                <p>{% if projectportfolio.urlproject != null and projectportfolio != "" %}
+                        <a href="{{projectportfolio.urlproject}}" target="_blank">Ir a Proyecto...</a>
                     {% endif %}
                 </p>
             </div>
